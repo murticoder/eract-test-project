@@ -1,16 +1,24 @@
 import Expenses from './components/Expenses/Expenses.js';
+import NewExpense from './components/NewExpense/NewExpense.js';
 
 const App = () => {
 
-const expenses = [
-    {title:'Car Insurence' , amount : '123' , date: new Date(2021,3,28)},
-    {title:'Test Deneme' , amount : '345' , date: new Date(2021,5,18)},
-    {title:'Falan filan' , amount : '1212' , date: new Date(2021,1,8)}
+  const expenses = [
+    { id: '1', title: 'Car Insurence', amount: '123', date: new Date(2021, 3, 28) },
+    { id: '2', title: 'Test Deneme', amount: '345', date: new Date(2021, 5, 18) },
+    { id: '3', title: 'Falan filan', amount: '1212', date: new Date(2021, 1, 8) }
   ];
+
+  const addExpenseHandler = (expense) => {
+    console.log('App.js');
+    console.log(expense);
+  };
+
+
   return (
     <div>
-      <h2>Lets get started!</h2>
-      <Expenses expenses={expenses}/>
+      <NewExpense onAddNewExpense={addExpenseHandler}/>
+      <Expenses expenses={expenses} />
     </div>
   );
 }
