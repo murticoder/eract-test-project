@@ -1,3 +1,6 @@
+# This application is a test application and its final version is in section-5 branch.
+
+# standard ReadMe file
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
